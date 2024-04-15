@@ -1,0 +1,14 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Because it took more time for worst and average case and less time for best case
+i.e O(N^2) and omega(N).
+
+sort2 uses: Merge Sort
+
+How do you know?: Because it took the lowest time among the other two sorting algorithms
+i.e theta(NlogN).
+
+sort3 uses: Selection Sort
+
+How do you know?: Because the time complexity or the time it took for each of best case,
+worst case and average case was the same that is theta(N^2).

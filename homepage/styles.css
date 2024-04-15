@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    margin: 0 10%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 500px;
+}
+
+.display-text {
+    font-size: 120px;
+    font-family:  'Times New Roman', Times, serif;
+}
+
+.typed-text {
+    font-size: 80px;
+    font-family:  'Times New Roman', Times, serif;
+}
+
+.change {
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px 30px;
+    letter-spacing: 2px;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.hobbies {
+    list-style: none;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    height: 100%;
+    width: 80%;
+}
+
+.hobby-1 {
+    position: absolute;
+    top: 35%;
+}
+
+.hobby-2 {
+    position: absolute;
+    right: 15%;
+}
+
+.hobby-3 {
+    position: absolute;
+    right: 55%;
+    bottom: 55%;
+}
+
+.hobby-4 {
+    position: absolute;
+    bottom: 20%;
+}
+
+.hobby-5 {
+    position: absolute;
+    right: 20%;
+    bottom: 40%;
+}
+
+.btn {
+    margin: 10px 0;
+}
+
+#message {
+    word-wrap: break-word;
+}

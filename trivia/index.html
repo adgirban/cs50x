@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded',function(){
+
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click',function(){
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#result1').innerHTML = 'Correct!';
+                });
+
+                let incorrects = document.querySelectorAll('.incorrect');
+                for(let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click',function(){
+                        incorrects[i].style.backgroundColor = 'red';
+                        document.querySelector('#result1').innerHTML = 'Incorrect!';
+                    });
+                }
+
+                let confirm = document.querySelector('#confirm');
+                confirm.addEventListener('click',function() {
+                    let answer = document.querySelector('input');
+                    if(answer.value == "Gautam Buddha") {
+                        answer.style.backgroundColor = 'green';
+                        document.querySelector('#result2').innerHTML = 'Correct!';
+                    } else {
+                        answer.style.backgroundColor = 'red';
+                        document.querySelector('#result2').innerHTML = 'Incorrect!';
+                    }
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Which is the highest peak in the world?</h3>
+                <button class = "incorrect">Mount K2</button>
+                <button class = "incorrect">Mount Makalu</button>
+                <button class = "correct">Mount Everest</button>
+                <button class = "incorrect">Mount Kanchanjunga</button>
+
+                <p id = "result1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Who is known as the 'Light of Asia'?</h3>
+                <input type = "text">
+                <button id = "confirm">Confirm Answer</button>
+
+                <p id = "result2"></p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+1. Take height as input from user
+2. Repeat the input process is height is less than 1 or greater than 8
+3. Loop i from 1 to height for that many rows:
+    1. Loop from 1 to (height-i) to display empty-space
+    2. Loop from 1 to i to display i number of hashes
+    3. Display new-line

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block main %}
+
+<div class="container-fluid text-center boxes">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        {% for vape1 in vapes1 %}
+        <div class="col">
+            <img src="{{ url_for('static', filename='images/' + vape1.name + '.webp') }}" alt="picture of vape"
+                class="vape-pic">
+            <h5 class="vape-name">{{ vape1.name.replace("-", " ").title() }}</h5>
+            <h6 class="vape-price">$ {{ vape1.price }}.00</h6>
+            <form action="/add" method="post">
+                <input type="hidden" name="cart-button" value="{{ vape1.id }}">
+                <button class="btn btn-dark" type="submit">Add to cart</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        {% for vape2 in vapes2 %}
+        <div class="col">
+            <img src="{{ url_for('static', filename='images/' + vape2.name + '.webp') }}" alt="picture of vape"
+                class="vape-pic">
+            <h5 class="vape-name">{{ vape2.name }}</h5>
+            <h6 class="vape-price">$ {{ vape2.price }}.00</h6>
+            <form action="/add" method="post">
+                <input type="hidden" name="cart-button" value="{{ vape2.id }}">
+                <button class="btn btn-dark" type="submit">Add to cart</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+1.
+
+AVG(energy) = 0.65906
+AVG(valence) = 0.484443
+AVG(danceability) = 0.71646
+
+Observing the averages in calulcation of audio aura,
+    Since the energy is slighly above normal so moderately energetic songs are preferred.
+    Since the valence is almost centally located so almost neutrally positive songs are preferred with slight deviation towards negativity.
+    Since the danceability is 3/4th of the preferences so people enjoy music that they can dance to.
+
+    Based on above observations, some genres could be POP, ROCK and CHILL.
+
+2.
+
+Only three factors may not be quite sufficient in calculation of the audio aura because not everyone
+chose and listen music based only on these three factors.
+I believe speechiness is also quite important as some may prefer clear audible music where some prefer mumble raps,etc.
+Similarly, the loudness is also to be considered as soft and loud music may be equally preferrable to people.

@@ -1,0 +1,51 @@
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav .navbar-brand
+{
+    font-size: xx-large;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+nav .navbar-brand .blue
+{
+    color: #4776b9;
+}
+
+.btn-dark {
+    font-size: 0.8rem;
+}
+
+.nav-link {
+    font-weight: 600;
+}
+
+.active {
+    background-color: #4776b9;
+}
+
+.btn-dark:hover {
+    color: black;
+    background-color: #4776b9ac;
+}
+
+.row {
+    margin: 1rem;
+}
+
+.vape-pic {
+    width: 100%;
+}
+
+.cart-col, .cart-row {
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.vape-pic-cart {
+    width: 200px;
+}

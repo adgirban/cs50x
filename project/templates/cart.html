@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Cart
+{% endblock %}
+
+{% block main %}
+
+{% if pay %}
+<h1 class="text-center">Payment Successful !!</h1>
+{% endif %}
+
+{% for cart in carts %}
+
+<div class="container boxes">
+    <div class="row row-cols-1 row-cols-md-2 cart-row">
+        <div class="col cart-col"><img src="{{ url_for('static', filename='images/' + cart.name + '.webp') }}"
+                alt="picture of vape" class="vape-pic-cart">
+        </div>
+        <div class="col cart-col">
+            <div class="row">
+                <p class="h4 text-center cart-row">{{ cart.name.replace("-", " ").title() }}</p>
+            </div>
+            <div class="row">
+                <p class="cart-row h5 text-center">Qty: {{ cart.quantity }}</p>
+            </div>
+            <div class=" row">
+                <p class="cart-row h4 text-center">$ {{ cart.total_price }}.00</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+
+{% if hide %}
+<div class="container boxes">
+    <div class="row row-cols-1 row-cols-md-2 cart-row">
+        <div class="col cart-col"></div>
+        <div class="col cart-col">
+            <div class="row">
+                <p class="h4 text-center cart-row">Grand Total = $ {{ grand }}.00</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container boxes">
+    <div class="row row-cols-1 row-cols-md-2 cart-row">
+        <div class="col cart-col"></div>
+        <div class="col cart-col">
+            <div class="row">
+                <div class="col">
+                    <form action="/clear" method="get">
+                        <button class="btn btn-dark" type="submit">Clear All</button>
+                    </form>
+                </div>
+                <div class="col">
+                    <form action="/pay" method="get">
+                        <button class="btn btn-dark" type="submit">Proceed to Pay</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,19 @@
+Times:
+
+10 simulations: 0m0.020s
+100 simulations: 0m0.022s
+1000 simulations: 0m0.026s
+10000 simulations: 0m0.082s
+100000 simulations: 0m0.649s
+1000000 simulations: 0m6.682s
+
+Questions:
+
+Which predictions, if any, proved incorrect as you increased the number of simulations?: TODO
+As the number of simulations increased, the prediction was consistent with Belgium as the winner but
+the prediction with (N=10) showed Brazil to be the winner with Belgium following after.
+
+Suppose you're charged a fee for each second of compute time your program uses.
+After how many simulations would you call the predictions "good enough"?: TODO
+It seems like the predictions stabilized at around 100 to 1000 simulations so maybe the mean i.e 500
+simulations could be called well enough.

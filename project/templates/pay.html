@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Payment
+{% endblock %}
+
+{% block main %}
+<form action="/pay" method="post">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="fullname" name="fullname"
+            placeholder="Full Name" type="text">
+    </div>
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="address1" name="address1"
+            placeholder="Address Line 1" type="text">
+    </div>
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="address2" name="address2"
+            placeholder="Address Line 2" type="text">
+    </div>
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="email" name="email"
+            placeholder="Email Address" type="email">
+    </div>
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="phone" name="phone"
+            placeholder="Phone Number" type="number">
+    </div>
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="postal" name="postal"
+            placeholder="Postal Code" type="number">
+    </div>
+    <div class="mb-3">
+        <label for="gateway" class="text-secondary">Gateway: </label>
+        <select name="gateway" id="gateway">
+            <option disabled selected value="None">None</option>
+            <option value="paypal">PayPal</option>
+            <option value="payoneer">Payoneer</option>
+            <option value="visa">Visa Card</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="amount" name="amount" type="number"
+            readonly="readonly" value="{{ grand }}">
+    </div>
+    <button class="btn btn-primary" type="submit">Proceed</button>
+</form>
+{% endblock %}
